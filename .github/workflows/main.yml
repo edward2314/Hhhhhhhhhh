@@ -1,0 +1,16 @@
+
+name: Windows RDP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  windows-rdp:
+    runs-on: windows-latest
+    timeout-minutes: 120
+    steps:
+      - name: Start Windows
+        run: |
+          echo "Windows runner started"
+          Start-Sleep -Seconds 7200
+        shell: powershell
